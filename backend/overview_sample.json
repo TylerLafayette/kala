@@ -1,0 +1,24 @@
+{
+    "username": "Tyler",
+    "currentBalance": 249.32,
+    "budget": 600.0,
+    "transactions": [
+        {
+            "description": "SQ *COFFEEBAR MENLO PAR 11/30 MOBILE PURCHASE Menlo Park CA",
+            "price": -14.99,
+            "finalBalance": 249.32
+        }
+    ],
+    "suggestions": [
+        {
+            "emoji": "kjdjfg",
+            "header": "Cut down on the coffee.",
+            "description": "Maybe try buying cheaper instant coffee that delivers the same caffeine boost.",
+            "amountSpentThisMonth": 49.0,
+            "callToActionType": "SAVING_SCHEDULE",
+            "data": {
+                "amtMonthly": 5.0
+            }
+        }
+    ]
+}
