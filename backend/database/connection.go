@@ -18,7 +18,7 @@ var DB Database
 
 // Connect initializes a connection to our database.
 func Connect() {
-	connString := "user=tyler dbname=tyler"
+	connString := "user=tyler dbname=tyler sslmode=disable"
 	var err error
 	DB.Conn, err = sql.Open("postgres", connString)
 	if err != nil {

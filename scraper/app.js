@@ -3,7 +3,7 @@ const fs = require("fs")
 const path = require("path")
 
 // Define array of file locations and load in their data
-let files = ["scraper_files/page1.htm", "scraper_files/page2.htm"]
+let files = ["scraper_files/page1.htm"]
 files = files.map(e => fs.readFileSync(path.join(__dirname, e)))
 
 let transactions = []
