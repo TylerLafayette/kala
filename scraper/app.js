@@ -17,7 +17,6 @@ files.forEach(e => {
         const price = parseFloat($(transactionElement).find(".amount").text().trim())
         const finalBalance = parseFloat($(transactionElement).find(".balance").text().trim())
         if(description.length < 3) return
-        // description = description.toString().split(" ")[2]
         console.log(`${description} | $${price} | $${finalBalance}`)
         transactions.push({
             description,

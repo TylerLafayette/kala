@@ -13,7 +13,7 @@
         {
             "emoji": "kjdjfg",
             "header": "Cut down on the coffee.",
-            "description": "Maybe try buying cheaper instant coffee that delivers the same caffeine boost.",
+            "description": "",
             "amountSpentThisMonth": 49.0,
             "callToActionType": "SAVING_SCHEDULE",
             "data": {
