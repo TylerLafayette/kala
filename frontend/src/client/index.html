@@ -1,6 +1,41 @@
 <htm>
     <head>
         <title>Kala</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* reset padding styles */
+            html, body {
+                width: 100%;
+                min-height: 100%;
+                padding: 0;
+                margin: 0;
+                font-family: "Lato", sans-serif;
+                color: #1F212E;
+            }
+            body {
+                border-top: 3px solid #ff8383;
+            }
+            .fade-in {
+                animation: fade-in 0.3s ease;
+            }
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            @keyframes spinny-circle {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(359deg);
+                }
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Libre+Baskerville:400,400i,700" rel="stylesheet">
     </head>
     <body>
         <div id="app-mount"></div>

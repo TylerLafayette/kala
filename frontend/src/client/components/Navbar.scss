@@ -1,0 +1,30 @@
+.nav-wrapper {
+    width: 100%;
+    padding: 0px 30px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    .links {
+        display: flex;
+        align-items: center;
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: rgb(63, 69, 99);
+            transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover {
+                opacity: 0.4;
+                transform: scale(0.9);
+            }
+        }
+    }
+    .logo-container {
+        .logo {
+            font-family: "Libre Baskerville", serif;
+            font-size: 72px;
+            line-height: 64px;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.transactions-list {
+    width: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+    .transaction-row {
+        padding: 20px 0px;
+        border-bottom: 1px solid #eeeeee;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slide-up 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        animation-fill-mode: forwards;
+
+        @keyframes slide-up {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 4px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+
+        .description {
+            display: block;
+        }
+
+        .price {
+            padding-top: 8px;
+            font-size: 12px;
+            display: block;
+            color: #949ab1;
+        }
+    }
+}

@@ -5,7 +5,7 @@ var Suggestions = map[string]Suggestion{
 	"coffee": Suggestion{
 		Emoji:            "☕️",
 		Header:           "Cut down on the coffee.",
-		Description:      "Maybe try buying cheaper instant coffee that delivers the same caffeine boost.",
+		Description:      "Maybe try buying cheaper instant coffee that delivers the same caffeine boost. Also, you can put the extra cash directly into your savings account.",
 		CallToActionType: "SAVING_SCHEDULE",
 		Data: map[string]interface{}{
 			"amtMonthly": 5.0,
@@ -30,6 +30,16 @@ var Suggestions = map[string]Suggestion{
 			"text": "FIND RECIPES",
 		},
 	},
+	"water": Suggestion{
+		Emoji:            "🚿",
+		Header:           "Try taking a shorter shower.",
+		Description:      "You spent ${} on water last month!. Consider taking shorter showers, or check out these tips on how to conserve.",
+		CallToActionType: "LINK_BUTTON",
+		Data: map[string]interface{}{
+			"url":  "https://www.conserveh2o.org/indoor-water-conservation-tips",
+			"text": "TIPS FOR SAVING WATER",
+		},
+	},
 }
 
 // MerchantMap stores a list of all merchants, based on category.
@@ -50,5 +60,9 @@ var MerchantMap = map[string][]string{
 		"mcdonald",
 		"subway",
 		"olivegarden",
+	},
+	"water": []string{
+		"water",
+		"calwater",
 	},
 }

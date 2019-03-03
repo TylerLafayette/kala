@@ -1,0 +1,42 @@
+.home-page-wrapper {
+    display: block;
+    margin: 0px auto;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 900px;
+    min-height: 100%;
+    background-color: #ffffff;
+
+    .hello-span {
+        display: block;
+        font-family: "Libre Baskerville", serif;
+        font-size: 36px;
+        padding: 30px;
+    }
+
+    .animated {
+        animation: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    @keyframes opacity {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    } 
+
+    .flex-split {
+        display: flex;
+        padding: 0px 28px;
+        flex-direction: row;
+        @media only screen and (max-width: 950px) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+}

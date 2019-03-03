@@ -1,0 +1,39 @@
+.meter-wrapper {
+    padding: 0px 30px;
+
+    .title-span {
+        font-family: "Libre Baskerville", serif;
+        display: block;
+        padding-bottom: 12px;
+    }
+    
+    .amount-spent {
+        font-weight: bold;
+        font-size: 32px;
+
+        .small {
+            font-size: 18px;
+        }
+    }
+
+    .meter-outer {
+        margin-top: 8px;
+        width: 100%;
+        height: 8px;
+        background-color: #EDEDED;
+        .meter-inner {
+            height: 100%;
+            background-color: #FE8787;
+            animation: meter-fill 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transform-origin: left;
+            @keyframes meter-fill {
+                0% {
+                    transform: scaleX(0);
+                }
+                100% {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}

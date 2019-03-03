@@ -19,10 +19,15 @@ func LoadTransactionsIntoDb(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 	var txns []models.Transaction
+	for i, j := 0, len(txns)-1; i < j; i, j = i+1, j-1 {
+		txns[i], txns[j] = txns[j], txns[i]
+	}
 	err = json.Unmarshal(data, &txns)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	_, _ = database.DB.Conn.Query("DELETE FROM transactions")
 
 	for _, e := range txns {
 		log.Println(e.Description)
@@ -32,5 +37,10 @@ func LoadTransactionsIntoDb(w http.ResponseWriter, r *http.Request) {
 			log.Fatal(err)
 		}
 	}
+
+	spendingStat = &map[int]float32{
+		0: 500,
+	}
+
 	render.JSON(w, r, txns)
 }

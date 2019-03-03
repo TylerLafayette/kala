@@ -1,0 +1,86 @@
+.suggestions-list {
+    width: 100%;
+    padding: 30px;
+    padding-right: 0px;
+    box-sizing: border-box;
+    .suggestion-row {
+        display: flex;
+        padding: 20px;
+        margin-bottom: 8px;
+        border: 1px solid #eeeeee;
+        border-radius: 12px;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slide-up 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        animation-fill-mode: forwards;
+        flex-direction: column;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        overflow: hidden;
+
+        &.collapsed {
+            padding: 0px;
+            height: 0px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        @keyframes slide-up {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        .title-and-description {
+            padding-left: 20px;
+            .header {
+                font-family: "Libre Baskerville", serif;
+                font-size: 14px;
+                font-weight: bold;
+                display: block;
+            }
+            .description {
+                display: block;
+                font-size: 12px;
+                color: #3f4e5b;
+                padding-top: 4px;
+            }
+        }
+
+        .cta-button {
+            margin-top: 24px;
+            margin-right: 6px;
+            text-decoration: none;
+            font-size: 9px;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 20px;
+            padding: 8px 16px;
+            background: #E5F6FF;
+            color: rgb(21, 64, 87);
+            transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover {
+                filter: saturate(4);
+            }
+            &.danger {
+                background: rgb(255, 229, 229);
+                color: rgb(87, 21, 21);  
+            }
+        }
+
+        .emoji {
+            font-size: 32px;
+        }
+    }
+}
