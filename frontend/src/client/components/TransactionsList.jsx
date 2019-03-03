@@ -14,7 +14,9 @@ export default class TransactionsList extends Component {
         const colors = {
             "coffee": "#593C1F",
             "restaurants": "#C242F4",
-            "water": "#0cdaff"
+            "water": "#0cdaff",
+            "groceries": "#82ff51",
+            "snacks": "#FF3E88"
         }
 
         return (

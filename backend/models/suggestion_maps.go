@@ -54,15 +54,22 @@ var MerchantMap = map[string][]string{
 		"walgreens",
 		"cvs",
 		"safeway",
+		"draeger",
 	},
 	"restaurants": []string{
 		"britishbankerscl",
 		"mcdonald",
 		"subway",
 		"olivegarden",
+		"unamas",
 	},
 	"water": []string{
 		"water",
 		"calwater",
+	},
+	"snacks": []string{
+		"letsgovending",
+		"vend",
+		"snack",
 	},
 }

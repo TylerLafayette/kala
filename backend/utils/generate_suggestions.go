@@ -31,7 +31,9 @@ func GenerateSuggestions(balance, budget float32, transactions []models.Transact
 		if v["amtSpent"].(float32) > 15 || v["count"].(int) > 2 {
 			s := models.Suggestions[k]
 			s.AmountSpentThisMonth = v["amtSpent"].(float32)
-			suggestions = append(suggestions, s)
+			if len(s.Header) > 2 {
+				suggestions = append(suggestions, s)
+			}
 		}
 	}
 
